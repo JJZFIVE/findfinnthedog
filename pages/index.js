@@ -147,7 +147,7 @@ function Sightings() {
 
   return (
     <div className="px-4 sm:px-6 lg:px-20 mt-10">
-      <div className=" flex flex-col pt-4 border-t-2 border-gray-400">
+      <div className=" flex flex-col pt-4 border-t-2 border-gray-400 text-center md:text-left">
         <h1 className="text-4xl font-bold">Sightings</h1>
         <p className="text-gray-600 mt-2 text-2xl">
           Here are the most recent sightings sent in from the community
@@ -622,6 +622,9 @@ function About() {
       <p className="mt-6 text-3xl text-gray-800 w-full font-bold text-center">
         If you think you&apos;ve seen him, please call{" "}
         <span>(302) 220-9433 </span>
+      </p>
+      <p className="mt-6 text-3xl text-gray-800 w-full font-bold text-center underline">
+        Do NOT yell! He might run away from the sound of your voice.
       </p>
     </div>
   );
