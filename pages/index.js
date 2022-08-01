@@ -57,15 +57,15 @@ export default function Home() {
 
       <About />
 
+      <Sightings />
+
       <Searches
         user={user}
         searchesRefresh={searchesRefresh}
         setShowModal={setShowModal}
       />
 
-      <Sightings />
-
-      <Purpose />
+      {/* <Purpose /> */}
 
       <Modal
         showModal={showModal}
@@ -111,14 +111,11 @@ function Hero() {
             back safely to us.
           </p>
           <p className="mt-6 text-3xl text-gray-200 md:w-2/3">
-            If you think you&apos;ve seen him, please contact us right away at
-            one of these numbers:
+            If you think you&apos;ve seen him, please contact us right away:
           </p>
-          <p className="mt-3 text-3xl text-gray-100 max-w-3xl font-bold">
-            Phone 1: <span>(302) 740-7176 </span>
-          </p>
+
           <p className="mt-6 text-3xl text-gray-100 max-w-3xl font-bold">
-            Phone 2: <span>(302) 220-9433 </span>
+            Phone: <span>(302) 220-9433 </span>
           </p>
         </div>
         <img
@@ -202,7 +199,18 @@ function Sightings() {
                         ).toDateString()}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4  text-gray-500">
-                        {sighting.location}
+                        {sighting?.locationIsLink ? (
+                          <a
+                            href={sighting.locationLink}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="text-blue-400 underline hover:opacity-80"
+                          >
+                            {sighting.location}
+                          </a>
+                        ) : (
+                          <p>{sighting.location}</p>
+                        )}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4  text-gray-500">
                         {sighting.notes}
@@ -269,9 +277,12 @@ function Searches({ user, searchesRefresh, setShowModal }) {
           <div className="md:w-2/3">
             <h1>Community Searches</h1>
             <p className="text-gray-600 mt-2 text-2xl font-normal">
-              The awesome DE and PA community is out searching for Finn! Check
-              out where people have been looking, or sign in with Google to add
-              your own search.
+              The DE and PA community is out searching for Finn! If you want to
+              search for Finn, first see where people have been looking. If you
+              want to let the community know where you looked,{" "}
+              <span className="underline">
+                you can sign in with Google to add your own search here!
+              </span>
             </p>
           </div>
           {user ? (
@@ -290,12 +301,12 @@ function Searches({ user, searchesRefresh, setShowModal }) {
             <div className="flex items-center justify-center flex-col">
               <button
                 onClick={signInWithGoogle}
-                className="bg-yellow-700 rounded-2xl px-2 py-4 hover:opacity-70"
+                className="bg-yellow-800 text-gray-200 rounded-2xl px-2 py-4 hover:opacity-70"
               >
                 Sign In with Google
               </button>
               <p className="font-normal text-lg text-gray-700">
-                (Sign in to post your Finn search)
+                (This is only for authentication)
               </p>
             </div>
           )}
@@ -345,22 +356,22 @@ function Searches({ user, searchesRefresh, setShowModal }) {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
-                  {searches.map((sighting) => (
-                    <tr key={sighting.name}>
-                      <td className="whitespace-nowrap py-4 pl-4 pr-3  font-medium text-gray-900 sm:pl-6">
-                        {sighting.name}
+                  {searches.map((search) => (
+                    <tr key={search.name} className="w-full">
+                      <td className="whitespace-nowrap py-4 pl-4 pr-3 w-1/6 font-medium text-gray-900 sm:pl-6 overscroll-auto">
+                        {search.name}
                       </td>
-                      <td className="whitespace-nowrap px-3 py-4 text-gray-500">
+                      <td className="whitespace-nowrap px-3 py-4 w-1/6 text-gray-500 overscroll-auto">
                         {new Date(
-                          sighting.time.seconds * 1000 +
-                            sighting.time.nanoseconds / 1000000
+                          search.time.seconds * 1000 +
+                            search.time.nanoseconds / 1000000
                         ).toDateString()}
                       </td>
-                      <td className="whitespace-nowrap px-3 py-4  text-gray-500">
-                        {sighting.location}
+                      <td className="whitespace-nowrap px-3 py-4 w-1/3 text-gray-500 overscroll-auto">
+                        {search.location}
                       </td>
-                      <td className="whitespace-nowrap px-3 py-4  text-gray-500">
-                        {sighting.notes}
+                      <td className="whitespace-nowrap px-3 py-4 w-1/3 text-gray-500 overscroll-auto">
+                        {search.notes}
                       </td>
                     </tr>
                   ))}
@@ -560,7 +571,9 @@ function About() {
               old, 40-lb English Pointer. He is usually very friendly and
               usually loves people, however we believe that he is now in
               &quot;survival mode.&quot; This means that he might be afraid of
-              people or might run away at sudden noises.{" "}
+              people or might run away at sudden noises. his harness has
+              reflective yarn, which should hopefully shine if using a
+              flashlight or car light to search.{" "}
               <span className="underline">
                 If you know someone with tracking dogs, we would appreciate if
                 you put us in contact!
@@ -598,7 +611,7 @@ function About() {
       </h2>
       <p className="text-center text-gray-700">
         We think he&apos;s in this area of upper Delaware into lower
-        Pennsylvania.
+        Pennsylvania. He could be as far north as Route 1 in PA.
       </p>
       <img
         src="map.jpg"
@@ -606,6 +619,10 @@ function About() {
         height="300"
         width="800"
       />
+      <p className="mt-6 text-3xl text-gray-800 w-full font-bold text-center">
+        If you think you&apos;ve seen him, please call{" "}
+        <span>(302) 220-9433 </span>
+      </p>
     </div>
   );
 }
