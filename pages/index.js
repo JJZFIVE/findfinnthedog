@@ -105,14 +105,14 @@ function Hero() {
               target="_blank"
               className="underline text-blue-300"
             >
-              went missing in Ramsey's Farm in Delaware
+              went missing in Ramsey&apos;s Farm in Delaware
             </a>{" "}
             on Friday, July 22. We need all the help we can get to bring him
             back safely to us.
           </p>
           <p className="mt-6 text-3xl text-gray-200 md:w-2/3">
-            If you think you've seen him, please contact us right away at one of
-            these numbers:
+            If you think you&apos;ve seen him, please contact us right away at
+            one of these numbers:
           </p>
           <p className="mt-3 text-3xl text-gray-100 max-w-3xl font-bold">
             Phone 1: <span>(302) 740-7176 </span>
@@ -441,9 +441,9 @@ function Modal({
                   </Dialog.Title>
                   <div className="mt-4">
                     <p className="text-lg text-gray-500">
-                      We want everyone to know who's searching where. If you
-                      went searching for Finn, please let others know where you
-                      searched. Thank you!
+                      We want everyone to know who&apos;s searching where. If
+                      you went searching for Finn, please let others know where
+                      you searched. Thank you!
                     </p>
                   </div>
 
@@ -524,19 +524,20 @@ function Purpose() {
       <div className="pt-4 border-t-2 border-gray-400 w-full">
         <h2 className="text-4xl font-bold">Sightings</h2>
         <p className="text-2xl w-5/6 mx-auto text-gray-700 pt-4">
-          A "sighting" is when someone calls us having seen Finn. We don't want
-          people spamming fake sightings, so only we are going to add them here.
-          Keep checking back daily, though, to see if there's new sightings!
+          A &quot;sighting&quot; is when someone calls us having seen Finn. We
+          don&apos;t want people spamming fake sightings, so only we are going
+          to add them here. Keep checking back daily, though, to see if
+          there&apos;s new sightings!
         </p>
       </div>
       <div className="pt-4 border-t-2 border-gray-400 w-full">
         <h2 className="text-4xl font-bold">Community Searches</h2>
         <p className="text-2xl w-5/6 mx-auto text-gray-700 pt-4">
-          "Searches" are the community going out and looking for Finn. We think
-          this is relevant so that everyone can see where everyone is looking.
-          If you see that people haven't searched a specific area, it might be a
-          good idea to go look there! You can add them right here on the website
-          after sigining in with Google!
+          &quot;Searches&quot; are the community going out and looking for Finn.
+          We think this is relevant so that everyone can see where everyone is
+          looking. If you see that people haven&apos;t searched a specific area,
+          it might be a good idea to go look there! You can add them right here
+          on the website after sigining in with Google!
         </p>
       </div>
     </div>
@@ -551,15 +552,15 @@ function About() {
           <div className="md:w-2/3 order-2 text-center md:text-left mt-4 md:mt-0">
             <h1 className="text-4xl">About</h1>
             <p className="text-gray-600 mt-2 text-2xl font-normal">
-              We lost our dog Finn on July 22 in Ramsey's Farm in Delaware. We
-              are deeply concerned that we will not find him ourselves since
+              We lost our dog Finn on July 22 in Ramsey&apos;s Farm in Delaware.
+              We are deeply concerned that we will not find him ourselves since
               there is a very large area of woods where he could be. Our friends
               and family have been asking how they can help, so we put together
               this website to keep everyone on the same page. He is a 2 year
               old, 40-lb English Pointer. He is usually very friendly and
               usually loves people, however we believe that he is now in
-              "survival mode." This means that he might be afraid of people or
-              might run away at sudden noises.{" "}
+              &quot;survival mode.&quot; This means that he might be afraid of
+              people or might run away at sudden noises.{" "}
               <span className="underline">
                 If you know someone with tracking dogs, we would appreciate if
                 you put us in contact!
@@ -596,7 +597,8 @@ function About() {
         Where we think Finn is
       </h2>
       <p className="text-center text-gray-700">
-        We think he's in this area of upper Delaware into lower Pennsylvania.
+        We think he&apos;s in this area of upper Delaware into lower
+        Pennsylvania.
       </p>
       <img
         src="map.jpg"
