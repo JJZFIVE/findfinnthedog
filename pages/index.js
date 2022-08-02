@@ -581,8 +581,9 @@ function About() {
             </p>
           </div>
           <div className="order-1 md:order-3 w-full md:w-1/3 py-3 bg-yellow-900 rounded-3xl border-black border-2 flex justify-center items-center text-gray-200 flex-col gap-3 text-4xl">
-            <p>Reward Available:</p>
-            <p className="text-gray-300">$300</p>
+            <p className="inline text-center">
+              Reward Available for safe return
+            </p>
           </div>
         </div>
       </div>
