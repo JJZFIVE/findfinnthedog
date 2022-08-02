@@ -601,8 +601,8 @@ function About() {
           className="rounded-xl border-2 border-black"
         />
         <img
-          src="finnground.jpg"
-          alt="Finn on the ground"
+          src="prettyFinn.jpeg"
+          alt="Finn being pretty"
           width="400"
           className="rounded-xl border-2 border-black"
         />
